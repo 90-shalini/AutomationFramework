@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count ="2" verbose="1" name="Way to Automation" parallel="methods">
+	<test name="Web Elements">
+	<classes>		
+			<class
+				name="com.tranings.advanceselenium.waytoautomation.tests.TestScriptSimpleElements" />
+		</classes>
+	</test> <!-- Test -->
+
+
+  <test name="Test">
+    <classes>
+      <class 
+      name="com.tranings.advanceselenium.waytoautomation.system.Init" />
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

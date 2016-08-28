@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Way to Automation" duration-ms="180091" started-at="2016-05-11T07:27:23Z" finished-at="2016-05-11T07:30:23Z">
+    <groups>
+      <group name="Required">
+        <method signature="TestScriptSimpleElements.testDatePicker()[pri:0, instance:com.tranings.advanceselenium.waytoautomation.tests.TestScriptSimpleElements@1e88b3c]" name="testDatePicker" class="com.tranings.advanceselenium.waytoautomation.tests.TestScriptSimpleElements"/>
+      </group> <!-- Required -->
+    </groups>
+    <test name="DatePicker" duration-ms="180091" started-at="2016-05-11T07:27:23Z" finished-at="2016-05-11T07:30:23Z">
+      <class name="com.tranings.advanceselenium.waytoautomation.tests.TestScriptSimpleElements">
+        <test-method status="PASS" signature="inialize()[pri:0, instance:com.tranings.advanceselenium.waytoautomation.tests.TestScriptSimpleElements@1e88b3c]" name="inialize" is-config="true" duration-ms="110051" started-at="2016-05-11T12:57:23Z" finished-at="2016-05-11T12:59:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- inialize -->
+        <test-method status="PASS" signature="testDatePicker()[pri:0, instance:com.tranings.advanceselenium.waytoautomation.tests.TestScriptSimpleElements@1e88b3c]" name="testDatePicker" duration-ms="65727" started-at="2016-05-11T12:59:13Z" finished-at="2016-05-11T13:00:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDatePicker -->
+        <test-method status="PASS" signature="closeProejct()[pri:0, instance:com.tranings.advanceselenium.waytoautomation.tests.TestScriptSimpleElements@1e88b3c]" name="closeProejct" is-config="true" duration-ms="4279" started-at="2016-05-11T13:00:19Z" finished-at="2016-05-11T13:00:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeProejct -->
+      </class> <!-- com.tranings.advanceselenium.waytoautomation.tests.TestScriptSimpleElements -->
+    </test> <!-- DatePicker -->
+  </suite> <!-- Way to Automation -->
+</testng-results>
