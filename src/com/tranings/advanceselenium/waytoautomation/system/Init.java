@@ -9,9 +9,13 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.tranings.advanceselenium.waytoautomation.help.Helper;
 import com.tranings.advanceselenium.waytoautomation.library.Mailer;
+import com.tranings.advanceselenium.waytoautomation.library.Utils;
+
 
 public class Init {
 	public static WebDriver driver; 
+	Utils util = new Utils();
+	
 	public static WebDriver initiate(){				
 		String name= "vibhor", password="password123";			
 		driver =startBrowser();
@@ -22,8 +26,7 @@ public class Init {
 	public static WebDriver startBrowser(){
 		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
-		driver.get("http://www.way2automation.com/");
-		
+		driver.get("http://www.way2automation.com/");		
 		return driver;
 	}
 	public static void sendMail(ExtentReports report,ExtentTest logger){
@@ -38,9 +41,8 @@ public class Init {
 	report.endTest(logger);
 	report.flush();
 }
-	public static void closeBrowser(){	
+	public void closeBrowser(WebDriver driver,ExtentTest logger){	
 		ArrayList<String> windows = new ArrayList<String> (driver.getWindowHandles());
-		
 		try{
 			if(windows != null){
 				for(int i=0; i<windows.size();i++){
@@ -52,7 +54,10 @@ public class Init {
 			System.out.println("closed all browsers....");
 		}
 		catch(Exception e){
-			e.printStackTrace();
+			String testName = Class.class.getEnclosingMethod().getName();
+			System.out.println("TestName: " +testName);
+			util.captureScreeshot(logger,driver,testName);
+			
 		}
 		finally{
 			if(windows != null){

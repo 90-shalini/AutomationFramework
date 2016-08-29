@@ -20,9 +20,9 @@ public class Mailer {
 	     {
 
 	      // Recipient's email ID needs to be mentioned.
-//	      String to = "90.shalini@gmail.com";
+
 	      // Sender's email ID needs to be mentioned
-//	      String from = "90.shalini@gmail.com";
+
 	      // Assuming you are sending email from localhost
 	      //String host = "localhost";
 		String host = "smtp.gmail.com";

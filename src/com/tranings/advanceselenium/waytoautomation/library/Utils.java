@@ -36,9 +36,9 @@ public class Utils {
 		//{
 			//destination where screenshot is saved
 		
-			String screenshot_path=Screenshot.takeSnapShot(driver, testName); 
-			String image= logger.addScreenCapture(screenshot_path);
-			logger.log(LogStatus.FAIL, "Way to Automation", image);
+			String screenshotDestination = Screenshot.takeSnapShot(driver, testName); 
+			
+			logger.log(LogStatus.FAIL, "Way to Automation", logger.addScreenCapture(screenshotDestination));
 		//}
 	}
 
