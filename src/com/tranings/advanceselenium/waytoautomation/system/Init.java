@@ -29,9 +29,9 @@ public class Init {
 	public static void sendMail(ExtentReports report,ExtentTest logger){
 	//close all reports		
 	//send mail
-	String from="2016.gudda@gmail.com";
-	String pass="11$May@2016";
-	String to="90.shalini@gmail.com";
+	String from="";
+	String pass="";
+	String to="";
 	
 	Mailer.sendReportByGMail(from, pass, to);
 
