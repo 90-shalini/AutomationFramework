@@ -29,7 +29,7 @@ public class TestScriptSimpleElements {
 		
 	}
 	
-
+	/**DatePicker Test case to handle calendar**/
 	@Test
 	public void testDatePicker(){
 		DatePicker dp = new DatePicker();
@@ -37,7 +37,6 @@ public class TestScriptSimpleElements {
 	}
 	
 	
-
 	@Test
 	public void testSelectables(){
 		Selectable selectItem = new Selectable();
