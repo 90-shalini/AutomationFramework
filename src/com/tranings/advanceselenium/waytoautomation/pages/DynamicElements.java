@@ -5,9 +5,8 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-
-import com.relevantcodes.extentreports.ExtentTest;
 import com.tranings.advanceselenium.waytoautomation.library.Utils;
+import org.apache.log4j.Logger;
 
 public class DynamicElements {
 	Utils util = new Utils();
@@ -22,7 +21,7 @@ public class DynamicElements {
 	By endsWithButton= By.xpath("//input[contains(@id,'1111')]");
 	List<WebElement> inputs =null;
 
-	public void clickDynamicButton(WebDriver driver,ExtentTest logger){
+	public void clickDynamicButton(WebDriver driver,Logger logger){
 		try{
 			//click on partial Dynamic element
 			util.minWaitForElementToBeVisible(driver, dynamicElementWidget);
@@ -30,9 +29,8 @@ public class DynamicElements {
 
 
 
-
 			//Starts with Functionality
-			System.out.println("clickDynamicButton->Starts With Functionality:");
+			logger.info("clickDynamicButton->Starts With Functionality:");
 			util.minWaitForElementToBeVisible(driver, startsWithTab);
 			util.minWaitForElementToBeVisible(driver, DemoFrame);
 			driver.switchTo().frame(driver.findElement(startsWithTab).findElement(DemoFrame));	
@@ -44,7 +42,7 @@ public class DynamicElements {
 
 
 			//Ends with Functionality
-			System.out.println("clickDynamicButton->Ends With Functionality:");
+			logger.info("clickDynamicButton->Ends With Functionality:");
 			util.minWaitForElementToBeVisible(driver,endsWithLink);
 			driver.findElement(endsWithLink).click();
 			driver.switchTo().frame(driver.findElement(endsWithTab).findElement(DemoFrame));	
@@ -56,7 +54,7 @@ public class DynamicElements {
 
 
 			//Complete Dynamic Button Functionality
-			System.out.println("clickDynamicButton->Complete ID Dynamic Functionality:");
+			logger.info("clickDynamicButton->Complete ID Dynamic Functionality:");
 			util.minWaitForElementToBeVisible(driver,completeIDDynamicLink);
 			driver.findElement(completeIDDynamicLink).click();
 			driver.switchTo().frame(driver.findElement(completeDynamicTab).findElement(DemoFrame));	

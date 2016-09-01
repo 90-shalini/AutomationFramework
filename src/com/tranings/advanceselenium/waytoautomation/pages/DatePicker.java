@@ -7,8 +7,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import org.apache.log4j.Logger;
 
-import com.relevantcodes.extentreports.ExtentTest;
 import com.tranings.advanceselenium.waytoautomation.library.Utils;
 
 public class DatePicker {
@@ -36,7 +36,7 @@ public class DatePicker {
 
 
 
-	public void pickDate(WebDriver driver,ExtentTest logger){
+	public void pickDate(WebDriver driver,Logger logger){
 
 		try{
 
@@ -45,7 +45,7 @@ public class DatePicker {
 			driver.findElement(datePickerLink).click();
 
 			//Default Functionality
-			System.out.println("pickDate->Default Functionality:");
+			logger.info("pickDate->Default Functionality:");
 			System.out.println("Today's Date Testing: "+new Date().toString());
 			util.minWaitForElementToBeVisible(driver, defaultFunctionalityLink);
 			driver.findElement(defaultFunctionalityLink).click();
@@ -58,7 +58,7 @@ public class DatePicker {
 
 
 			//Animation Tab
-			System.out.println("pickDate->Animation Functionality:");
+			logger.info("pickDate->Animation Functionality:");
 			util.minWaitForElementToBeVisible(driver, animationLink);
 			driver.findElement(animationLink).click();
 			driver.switchTo().frame(driver.findElement(animationTab).findElement(DemoFrame));	
@@ -81,7 +81,7 @@ public class DatePicker {
 			driver.switchTo().defaultContent();
 
 			//Display Month and Year
-			System.out.println("pickDate->Display Month and Year Functionality:");
+			logger.info("pickDate->Display Month and Year Functionality:");
 			util.minWaitForElementToBeVisible(driver, displayMonthYearLink);
 			driver.findElement(displayMonthYearLink).click();
 			driver.switchTo().frame(driver.findElement(displayMonthYearTab).findElement(DemoFrame));
@@ -97,7 +97,7 @@ public class DatePicker {
 
 
 			//format Date
-			System.out.println("pickDate->Format Date Functionality:");
+			logger.info("pickDate->Format Date Functionality:");
 			util.minWaitForElementToBeVisible(driver, formatDateLink);
 			driver.findElement(formatDateLink).click();
 			driver.switchTo().frame(driver.findElement(formatDateTab).findElement(DemoFrame));

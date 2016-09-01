@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.apache.log4j.Logger;
 
 import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
 import com.tranings.advanceselenium.waytoautomation.help.Helper;
 import com.tranings.advanceselenium.waytoautomation.library.Mailer;
 import com.tranings.advanceselenium.waytoautomation.library.Utils;
@@ -22,6 +22,7 @@ public class Init {
 		Helper hlp = new Helper();
 		hlp.navigateToDemoSite(driver,name,password);
 		return driver;
+		
 	}
 	public static WebDriver startBrowser(){
 		driver = new FirefoxDriver();
@@ -29,7 +30,7 @@ public class Init {
 		driver.get("http://www.way2automation.com/");		
 		return driver;
 	}
-	public static void sendMail(ExtentReports report,ExtentTest logger){
+	public static void sendMail(ExtentReports report,Logger logger){
 	//close all reports		
 	//send mail
 	String from="";
@@ -38,10 +39,10 @@ public class Init {
 	
 	Mailer.sendReportByGMail(from, pass, to);
 
-	report.endTest(logger);
+	//report.endTest(logger);
 	report.flush();
 }
-	public void closeBrowser(WebDriver driver,ExtentTest logger){	
+	public void closeBrowser(WebDriver driver,Logger logger){	
 		ArrayList<String> windows = new ArrayList<String> (driver.getWindowHandles());
 		try{
 			if(windows != null){

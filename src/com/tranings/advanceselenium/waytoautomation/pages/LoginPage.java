@@ -3,6 +3,7 @@ package com.tranings.advanceselenium.waytoautomation.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import com.sun.media.jfxmedia.logging.Logger;
 import com.tranings.advanceselenium.waytoautomation.library.Utils;
 
 public class LoginPage {	
@@ -20,6 +21,7 @@ public class LoginPage {
 		driver.findElement(loginDiv).findElement(userName).sendKeys(name);
 		driver.findElement(loginDiv).findElement(passWord).sendKeys(password);
 		driver.findElement(loginDiv).findElement(loginButton).click();
+		
 	}
 
 

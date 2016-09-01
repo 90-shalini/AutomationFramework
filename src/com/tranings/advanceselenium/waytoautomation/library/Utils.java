@@ -4,9 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import com.relevantcodes.extentreports.ExtentTest;
-import com.relevantcodes.extentreports.LogStatus;
+import org.apache.log4j.Logger;
 
 public class Utils {
 	/*---------------Wait for element to be visible function---------------*/
@@ -30,7 +28,7 @@ public class Utils {
 
 	}
 	/*---------------capture screenshot function---------------*/
-	public void captureScreeshot(ExtentTest logger,WebDriver driver,String testName)
+	public void captureScreeshot(Logger logger,WebDriver driver,String testName)
 	{
 		//if(result.getStatus()==ITestResult.FAILURE)
 		//{
@@ -38,7 +36,7 @@ public class Utils {
 		
 			String screenshotDestination = Screenshot.takeSnapShot(driver, testName); 
 			
-			logger.log(LogStatus.FAIL, "Way to Automation", logger.addScreenCapture(screenshotDestination));
+			//logger.log(LogStatus.FAIL, "Way to Automation");// logger. .addScreenCapture(screenshotDestination));
 		//}
 	}
 
