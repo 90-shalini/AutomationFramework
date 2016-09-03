@@ -9,7 +9,7 @@ import org.apache.log4j.Logger;
 import com.tranings.advanceselenium.waytoautomation.library.Utils;
 
 public class Selectable {
-	By heading = By.xpath("//h1[contains(text(),'Selectable')]");
+	//By heading = By.xpath("//h1[contains(text(),'Selectable')]");
 	By DemoFrame = By.className("demo-frame");
 	By defaultFunctionality = By.linkText("Default functionality");
 	By bottomDiv = By.className("container margin-top-20");
@@ -54,7 +54,7 @@ public class Selectable {
 			clickItem("Item 2", driver);
 			System.out.println(driver.findElement(getItemNumber).getText());
 			driver.switchTo().defaultContent();
-			Assert.assertEquals("Selectable", driver.findElement(heading).getText());
+			//Assert.assertEquals("Selectable", driver.findElement(heading).getText());
 			
 			
 			

@@ -33,9 +33,9 @@ public class Init {
 	public static void sendMail(ExtentReports report,Logger logger){
 	//close all reports		
 	//send mail
-	String from="";
-	String pass="";
-	String to="";
+	String from="2006.gudda@gmail.com";
+	String pass="password123";
+	String to="90.shalini@gmail.com";
 	
 	Mailer.sendReportByGMail(from, pass, to);
 
