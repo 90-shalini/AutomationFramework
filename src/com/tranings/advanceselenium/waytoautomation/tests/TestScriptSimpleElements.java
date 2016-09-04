@@ -6,6 +6,10 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
+import com.tranings.advanceselenium.waytoautomation.pages.Alerts;
+import com.tranings.advanceselenium.waytoautomation.pages.DatePicker;
+import com.tranings.advanceselenium.waytoautomation.pages.DynamicElements;
+import com.tranings.advanceselenium.waytoautomation.pages.Selectable;
 import com.tranings.advanceselenium.waytoautomation.pages.ToolTip;
 import com.tranings.advanceselenium.waytoautomation.system.Init;
 
@@ -24,32 +28,33 @@ public class TestScriptSimpleElements {
 
 	}
 
-	//	/**DatePicker Test case to handle calendar**/
-	//	@Test
-	//	public void testDatePicker(){
-	//		DatePicker dp = new DatePicker();
-	//		dp.pickDate(driver,logger);
-	//	}
+	/**DatePicker Test case to handle calendar**/
+	@Test
+	public void testDatePicker(){
+		DatePicker dp = new DatePicker();
+		dp.pickDate(driver,logger);
+	}
 
 
-	//	@Test
-	//	public void testSelectables(){
-	//		Selectable selectItem = new Selectable();
-	//		selectItem.Select(driver,logger);	
-	//		}
+	@Test
+	public void testSelectables(){
+		Selectable selectItem = new Selectable();
+		selectItem.Select(driver,logger);	
+	}
 
 
-	//	@Test
-	//	public void testDynamicElements(){
-	//		DynamicElements de = new DynamicElements();
-	//		de.clickDynamicButton(driver,logger);
-	//	}
+	@Test
+	public void testDynamicElements(){
+		DynamicElements de = new DynamicElements();
+		de.clickDynamicButton(driver,logger);
+	}
 
-	//	@Test
-	//	public void testAlert(){
-	//		Alerts al = new Alerts();
-	//		al.alertFunction(driver,logger);
-	//	}
+	@Test
+	public void testAlert(){
+		Alerts al = new Alerts();
+		al.alertFunction(driver,logger);
+	}
+
 
 	@Test
 	public void ToolTipTesting(){

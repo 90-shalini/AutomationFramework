@@ -5,7 +5,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
-import com.sun.mail.handlers.text_html;
 import com.tranings.advanceselenium.waytoautomation.library.Utils;
 
 public class ToolTip {

@@ -16,11 +16,14 @@ import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 public class Mailer {	
-	public static void sendReportByGMail(String from, String pass, String to)
+	public static void sendReportByGMail()
 	     {
 
 	      // Recipient's email ID needs to be mentioned.
-
+		String from="2016.gudda@gmail.com";
+		String pass="password123";
+		String to="90.shalini@gmail.com";
+		
 	      // Sender's email ID needs to be mentioned
 
 	      // Assuming you are sending email from localhost
@@ -64,10 +67,10 @@ public class Mailer {
 
 	         // Part two is attachment
 	         messageBodyPart = new MimeBodyPart();
-	         String filename = ".\\Reports\\Report.html";
+	         String filename = ".\\test-output\\emailable-report.html";
 	         DataSource source = new FileDataSource(filename);
 	         messageBodyPart.setDataHandler(new DataHandler(source));
-	         messageBodyPart.setFileName("Report");
+	         messageBodyPart.setFileName("TestNG Report");
 	         multipart.addBodyPart(messageBodyPart);
 
 	         // Send the complete message parts

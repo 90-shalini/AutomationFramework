@@ -2,11 +2,10 @@ package com.tranings.advanceselenium.waytoautomation.system;
 
 import java.util.ArrayList;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.apache.log4j.Logger;
 
-import com.relevantcodes.extentreports.ExtentReports;
 import com.tranings.advanceselenium.waytoautomation.help.Helper;
 import com.tranings.advanceselenium.waytoautomation.library.Mailer;
 import com.tranings.advanceselenium.waytoautomation.library.Utils;
@@ -30,17 +29,14 @@ public class Init {
 		driver.get("http://www.way2automation.com/");		
 		return driver;
 	}
-	public static void sendMail(ExtentReports report,Logger logger){
+	public static void sendMail(Logger logger){
 	//close all reports		
 	//send mail
-	String from="2006.gudda@gmail.com";
-	String pass="password123";
-	String to="90.shalini@gmail.com";
 	
-	Mailer.sendReportByGMail(from, pass, to);
+	//Mailer.sendReportByGMail();
 
 	//report.endTest(logger);
-	report.flush();
+	//report.flush();
 }
 	public void closeBrowser(WebDriver driver,Logger logger){	
 		ArrayList<String> windows = new ArrayList<String> (driver.getWindowHandles());

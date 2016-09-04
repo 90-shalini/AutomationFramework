@@ -24,6 +24,7 @@ public class DynamicElements {
 	public void clickDynamicButton(WebDriver driver,Logger logger){
 		try{
 			//click on partial Dynamic element
+			logger.info("clickDynamicButton functionality started:");
 			util.minWaitForElementToBeVisible(driver, dynamicElementWidget);
 			driver.findElement(dynamicElementWidget).click();
 
